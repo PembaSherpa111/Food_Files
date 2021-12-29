@@ -21,6 +21,13 @@ def clean_missing(file_list):
             delete(idx)
     return(foods_list,highfiber_list,lowfat_list,low_glycemic_index_list)
 
+#removing corrupted data function
+def removing_corrupted(file_list):
+    i = 1
+    for i in range(1,(len(file_list)-1)):
+        if file_list[i].lower() not in ['yes', 'no']:
+            delete(i)
+
 #creating key:value pair function
 def dict_file(file_list):
     dict_file= []
@@ -53,6 +60,11 @@ clean_missing(foods_list)
 clean_missing(highfiber_list)
 clean_missing(lowfat_list)
 clean_missing(low_glycemic_index_list)
+
+#removing corrupted data
+removing_corrupted(highfiber_list)
+removing_corrupted(lowfat_list)
+removing_corrupted(low_glycemic_index_list)
 
 #creating dictionary
 foods_info = []

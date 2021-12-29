@@ -28,12 +28,6 @@ def removing_corrupted(file_list):
         if file_list[i].lower() not in ['yes', 'no']:
             delete(i)
 
-#creating key:value pair function
-def dict_file(file_list):
-    dict_file= []
-    for i in range(1,len(file_list)):
-        dict_file.append(f'{file_list[0]}:{file_list[i]}')
-    return(dict_file)
     
 #variables    
 foods = 'foods'
@@ -77,7 +71,3 @@ for i in range(1,len(foods_list)):
 
 with open("foods_info.json","w") as writer:
     json.dump(foods_info,writer)
-
-
-
-

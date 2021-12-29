@@ -31,3 +31,4 @@ for i in range(0,len(foods_info)):
         if (dict['high fiber']).lower() == 'yes':
             if (dict['low glycemic index']).lower() == 'yes':
                 print(f'{dict["foods"]} is recommended food.')
+print(len(foods_info))

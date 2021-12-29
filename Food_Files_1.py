@@ -1,3 +1,5 @@
+import json
+
 #reading function
 def reader(file_name):
     with open(f'{file_name}.txt','r') as str_file:
@@ -12,7 +14,6 @@ def delete(idx):
     del low_glycemic_index_list[idx]
     return(foods_list,highfiber_list,lowfat_list,low_glycemic_index_list)
 
-import json
 #cleaning missing data function
 def clean_missing(file_list):
     for idx, val in enumerate(file_list):
